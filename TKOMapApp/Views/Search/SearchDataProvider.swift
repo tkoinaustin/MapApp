@@ -32,7 +32,7 @@ class SearchDataProvider: NSObject, UITableViewDataSource {
         if let cell = cell as? SearchResultCell {
           let place = viewModel.places[indexPath.row]
           cell.backgroundColor = UIColor.white.withAlphaComponent(0.5)
-          cell.fullAddressLabel.text = place.fullAddress
+          cell.address = place.fullAddress
           cell.accessoryType = .disclosureIndicator
         }
     cell.selectionStyle = .none

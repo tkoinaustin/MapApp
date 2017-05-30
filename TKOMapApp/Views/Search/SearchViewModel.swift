@@ -19,9 +19,24 @@ class SearchViewModel {
   var updateUI: (() -> Void) = { }
   var showError: ((APIError) -> Void) = { _ in }
   let disposeBag = DisposeBag()
+  let endEditing: Driver<Void>
   
-  init(_ searchCriteria: ControlProperty<String>) {
-    searchCriteria.asObservable()
+  init(searchCriteria: Observable<String>,
+       searchClick: Observable<Void>,
+       cancelClick: Observable<Void>
+    ) {
+    endEditing = Observable.of(searchClick, cancelClick)
+      .merge()
+      .asDriver(onErrorJustReturn: ())
+    
+    searchClick
+      .withLatestFrom(searchCriteria)
+      .subscribe(onNext: { text in
+        _ = self.load(text)
+      })
+      .addDisposableTo(disposeBag)
+
+    searchCriteria
       .distinctUntilChanged()
       .subscribe(onNext: { string in
         if string.isEmpty {
@@ -33,6 +48,8 @@ class SearchViewModel {
   }
 
   func load(_ searchString: String) -> Promise<Void> {
+    
+    // One second delay between consecutive search requests
     guard !SearchViewModel.waiting else { return Promise { fulfill, _ in fulfill() } }
     SearchViewModel.waiting = true
     DispatchQueue.main.asyncAfter(deadline: .now() + 1.0, execute: { SearchViewModel.waiting = false } )

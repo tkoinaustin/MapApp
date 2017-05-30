@@ -10,5 +10,9 @@ import UIKit
 
 class SearchResultCell: UITableViewCell {
   
-  @IBOutlet weak var fullAddressLabel: UILabel!
+  var address = "" { didSet {
+    fullAddressLabel.text = address
+  }}
+  
+  @IBOutlet private weak var fullAddressLabel: UILabel!
 }

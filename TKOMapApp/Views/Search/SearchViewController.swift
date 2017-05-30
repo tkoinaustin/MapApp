@@ -14,7 +14,9 @@ class SearchViewController: UIViewController {
   let disposeBag = DisposeBag()
   
   fileprivate lazy var viewModel: SearchViewModel = {
-    return SearchViewModel(self.searchBar.rx.text.orEmpty)
+    return SearchViewModel(searchCriteria: self.searchBar.rx.text.orEmpty.asObservable(),
+                           searchClick: self.searchBar.rx.searchButtonClicked.asObservable(),
+                           cancelClick: self.searchBar.rx.cancelButtonClicked.asObservable())
   }()
   
   let provider = SearchDataProvider()
@@ -40,19 +42,12 @@ class SearchViewController: UIViewController {
     viewModel.showError = showConnectionProblems
     provider.viewModel = viewModel
     provider.registerCells(for: self.tableView)
-
-    searchBar.rx.cancelButtonClicked.asObservable()
-      .subscribe(onNext: { _ in
-        self.searchBar.endEditing(true)
+    
+    viewModel.endEditing
+      .drive(onNext: { [weak self] _ in
+        self?.searchBar.endEditing(true)
       })
     .addDisposableTo(disposeBag)
-    
-    searchBar.rx.searchButtonClicked
-      .subscribe(onNext: { _ in
-        _ = self.viewModel.load(self.searchBar.text!)
-        self.searchBar.endEditing(true)
-      })
-      .addDisposableTo(disposeBag)
   }
   
   func showConnectionProblems(_ error: APIError) {
@@ -75,8 +70,6 @@ class SearchViewController: UIViewController {
 extension SearchViewController: UITableViewDelegate {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     self.searchBar.endEditing(true)
-    DispatchQueue.main.async {
-      self.performSegue(withIdentifier: "detailViewSegue", sender: self.viewModel.places[indexPath.row])
-    }
+    self.performSegue(withIdentifier: "detailViewSegue", sender: self.viewModel.places[indexPath.row])
   }
 }
