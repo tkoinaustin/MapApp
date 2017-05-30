@@ -34,6 +34,7 @@ enum APIError: Error {
   case server
   case reachability
   case badkey
+  case noResults
   
   func desc() -> String {
     switch self {
@@ -43,6 +44,7 @@ enum APIError: Error {
     case .server: return "Server Error"
     case .reachability: return "Network is unreachable, check network settings"
     case .badkey: return "OpenCage API key problem"
+    case .noResults: return "The query returned no results"
     }
   }
 }

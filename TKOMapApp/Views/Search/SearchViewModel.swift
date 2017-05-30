@@ -12,6 +12,7 @@ import RxSwift
 import RxCocoa
 
 class SearchViewModel {
+  static var waiting = false
   var places = [Location]()
   var updateUI: (() -> Void) = { }
   var showError: ((APIError) -> Void) = { _ in }
@@ -19,20 +20,21 @@ class SearchViewModel {
   
   init(_ searchCriteria: ControlProperty<String>) {
     searchCriteria.asObservable()
-      .debounce(0.8, scheduler: MainScheduler.instance)
       .distinctUntilChanged()
       .subscribe(onNext: { string in
         if string.isEmpty {
           self.places.removeAll()
           self.updateUI()
-        } else {
-          _ = self.load(string)
         }
       })
       .addDisposableTo(disposeBag)
   }
 
   func load(_ searchString: String) -> Promise<Void> {
+    guard !SearchViewModel.waiting else { return Promise { fulfill, _ in fulfill() } }
+    SearchViewModel.waiting = true
+    DispatchQueue.main.asyncAfter(deadline: .now() + 1.0, execute: { SearchViewModel.waiting = false } )
+
     UIApplication.shared.isNetworkActivityIndicatorVisible = true
     return OpenCageResults.load(searchString).then { results -> Promise<Void> in
       print(results)
@@ -43,6 +45,9 @@ class SearchViewModel {
       }
       
       self.updateUI()
+      if self.places.count == 0 {
+        self.showError(APIError.noResults)
+      }
       return Promise {fulfill, _ in
         fulfill()
       }

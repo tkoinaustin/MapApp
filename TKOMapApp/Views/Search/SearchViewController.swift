@@ -20,11 +20,6 @@ class SearchViewController: UIViewController {
   let provider = SearchDataProvider()
   
   @IBOutlet fileprivate weak var searchBar: UISearchBar! { didSet {
-    searchBar.showsCancelButton = true
-    searchBar.returnKeyType = .done
-    searchBar.placeholder = "Looking for somewhere?"
-    searchBar.barTintColor = UIColor.orange
-    searchBar.tintColor = UIColor.blue
     let cancelButtonAttributes: NSDictionary = [NSForegroundColorAttributeName: UIColor.white]
     UIBarButtonItem.appearance().setTitleTextAttributes(cancelButtonAttributes as? [String : AnyObject],
                                                         for: UIControlState.normal)
@@ -56,6 +51,7 @@ class SearchViewController: UIViewController {
     searchBar.rx.searchButtonClicked
       .debug("searchButtonClicked")
       .subscribe(onNext: { _ in
+        _ = self.viewModel.load(self.searchBar.text!)
         self.searchBar.endEditing(true)
       })
       .addDisposableTo(disposeBag)

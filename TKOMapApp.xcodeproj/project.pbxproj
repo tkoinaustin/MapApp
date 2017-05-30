@@ -206,8 +206,8 @@
 		CB32E7E31EDCE53200B1D8A1 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
-				CB32E7FB1EDCE72600B1D8A1 /* DetailView.storyboard */,
 				CB32E7FC1EDCE72600B1D8A1 /* DetailViewController.swift */,
+				CB32E7FB1EDCE72600B1D8A1 /* DetailView.storyboard */,
 			);
 			name = Detail;
 			sourceTree = "<group>";
@@ -216,9 +216,9 @@
 			isa = PBXGroup;
 			children = (
 				CB32E7F31EDCE71A00B1D8A1 /* SearchDataProvider.swift */,
-				CB32E7F41EDCE71A00B1D8A1 /* SearchView.storyboard */,
-				CB32E7F51EDCE71A00B1D8A1 /* SearchViewController.swift */,
 				CB32E7F61EDCE71A00B1D8A1 /* SearchViewModel.swift */,
+				CB32E7F51EDCE71A00B1D8A1 /* SearchViewController.swift */,
+				CB32E7F41EDCE71A00B1D8A1 /* SearchView.storyboard */,
 			);
 			name = Search;
 			sourceTree = "<group>";

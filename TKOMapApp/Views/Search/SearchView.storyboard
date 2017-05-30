@@ -12,7 +12,7 @@
         <!--Search View Controller-->
         <scene sceneID="YYy-6v-P6i">
             <objects>
-                <viewController id="hgN-zv-4Fe" customClass="SearchViewController" customModule="TKOOpenCage" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="hgN-zv-4Fe" customClass="SearchViewController" customModule="TKOMapApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="elN-S6-p8a"/>
                         <viewControllerLayoutGuide type="bottom" id="32v-zo-0H3"/>
@@ -24,9 +24,14 @@
                             <imageView userInteractionEnabled="NO" alpha="0.25" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="PyM-Xk-lqR">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="bgM-yY-5cP">
+                            <searchBar contentMode="redraw" placeholder="Looking for Somewhere" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bgM-yY-5cP">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <color key="barTintColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gQm-8q-h0x">
                                 <rect key="frame" x="0.0" y="44" width="375" height="623"/>
