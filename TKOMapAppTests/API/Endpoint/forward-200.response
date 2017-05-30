@@ -1,0 +1,13 @@
+HTTP/1.1 200 OK
+Date: Mon, 29 May 2017 21:39:14 GMT
+Server: Apache/2.4.18 (Ubuntu)
+Access-control-allow-origin: *
+X-ratelimit-limit: 2500
+X-ratelimit-remaining: 2344
+X-ratelimit-reset: 1496016000
+Connection: close
+Transfer-Encoding: chunked
+Content-Type: application/json; charset=utf-8
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+
+{"documentation":"https://geocoder.opencagedata.com/api","licenses":[{"name":"CC-BY-SA","url":"http://creativecommons.org/licenses/by-sa/3.0/"},{"name":"ODbL","url":"http://opendatacommons.org/licenses/odbl/summary/"}],"rate":{"limit":2500,"remaining":2344,"reset":1496016000},"results":[{"annotations":{"DMS":{"lat":"30\u00b0 16' 16.06296'' N","lng":"97\u00b0 44' 37.31784'' W"},"MGRS":"14RPU2084149497","Maidenhead":"EM10dg05sb","Mercator":{"x":-10880778.845,"y":3516912.929},"OSM":{"edit_url":"https://www.openstreetmap.org/edit?relation=113314#map=17/30.27113/-97.74370","url":"https://www.openstreetmap.org/?mlat=30.27113&mlon=-97.74370#map=17/30.27113/-97.74370"},"callingcode":1,"currency":{"alternate_symbols":["US$"],"decimal_mark":".","disambiguate_symbol":"US$","html_entity":"$","iso_code":"USD","iso_numeric":840,"name":"United States Dollar","smallest_denomination":1,"subunit":"Cent","subunit_to_unit":100,"symbol":"$","symbol_first":1,"thousands_separator":","},"geohash":"9v6kpy9nner5z0ky1r94","qibla":43.5,"sun":{"rise":{"apparent":1496057340,"astronomical":1496051700,"civil":1496055720,"nautical":1496053740},"set":{"apparent":1496021160,"astronomical":1496026860,"civil":1496022780,"nautical":1496024760}},"timezone":{"name":"America/Chicago","now_in_dst":1,"offset_sec":-18000,"offset_string":-500,"short_name":"CDT"},"what3words":{"words":"movies.bristle.space"},"wikidata":"Q16559"},"bounds":{"northeast":{"lat":30.516863,"lng":-97.5614889},"southwest":{"lat":30.0986648,"lng":-97.9383829}},"components":{"_type":"city","city":"Austin","country":"United States of America","country_code":"us","county":"Travis County","state":"Texas","state_code":"TX"},"confidence":2,"formatted":"Austin, Travis County, Texas, United States of America","geometry":{"lat":30.2711286,"lng":-97.7436994}}],"status":{"code":200,"message":"OK"},"stay_informed":{"blog":"http://blog.opencagedata.com","twitter":"https://twitter.com/opencagedata"},"thanks":"For using an OpenCage Data API","timestamp":{"created_http":"Mon, 29 May 2017 21:39:14 GMT","created_unix":1496093954},"total_results":1}

@@ -1,0 +1,46 @@
+PODS:
+  - OHHTTPStubs (6.0.0):
+    - OHHTTPStubs/Default (= 6.0.0)
+  - OHHTTPStubs/Core (6.0.0)
+  - OHHTTPStubs/Default (6.0.0):
+    - OHHTTPStubs/Core
+    - OHHTTPStubs/JSON
+    - OHHTTPStubs/NSURLSession
+    - OHHTTPStubs/OHPathHelpers
+  - OHHTTPStubs/HTTPMessage (6.0.0):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/JSON (6.0.0):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/NSURLSession (6.0.0):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/OHPathHelpers (6.0.0)
+  - OHHTTPStubs/Swift (6.0.0):
+    - OHHTTPStubs/Default
+  - PromiseKit/CorePromise (4.1.7)
+  - ReachabilitySwift (3)
+  - RxCocoa (3.4.0):
+    - RxSwift (~> 3.4)
+  - RxSwift (3.4.0)
+  - SwiftyJSON (3.1.4)
+
+DEPENDENCIES:
+  - OHHTTPStubs
+  - OHHTTPStubs/HTTPMessage
+  - OHHTTPStubs/Swift
+  - PromiseKit/CorePromise
+  - ReachabilitySwift
+  - RxCocoa
+  - RxSwift
+  - SwiftyJSON
+
+SPEC CHECKSUMS:
+  OHHTTPStubs: 752f9b11fd810a15162d50f11c06ff94f8e012eb
+  PromiseKit: 779f2e41faf62d854e7593026ddbcb0bb5c5002d
+  ReachabilitySwift: f5b9bb30a0777fac8f09ce8b067e32faeb29bb64
+  RxCocoa: d14ef6b6029e1ddc6e966508c09289090de68ff9
+  RxSwift: 3789a1af753002a14edecdb698a2424624296a9c
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+
+PODFILE CHECKSUM: 7c27c2901c297743643f974d2961deeb7d273e95
+
+COCOAPODS: 1.2.1
