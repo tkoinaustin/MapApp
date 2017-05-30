@@ -1,4 +1,4 @@
-# TKOOpenCage
+# TKOMapApp
 ### aka, Map App
 Use the Open Cage API for forward Geocoding lookups
 
@@ -22,9 +22,9 @@ Follow the instructions to obtain your free API key here: https://geocoder.openc
 
 ### Then, in your project directory:
 
-Copy 'TKOOpenCage/APIinfo.plist.template' to 'TKOOpenCage/APIinfo.plist'
+Copy 'TKOMapApp/APIinfo.plist.template' to 'TKOMapApp/APIinfo.plist'
 
-Add 'TKOOpenCage/APIinfo.plist' to your project
+Add 'TKOMapApp/APIinfo.plist' to your project
 
 Open and edit the file, add your key value to the OpenCageAPIkey entry under Root
 
