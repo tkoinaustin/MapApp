@@ -46,7 +46,7 @@ class SearchViewModel {
       }
       
       self.updateUI()
-      if self.places.count == 0 {
+      if self.places.isEmpty {
         self.showError(APIError.noResults)
       }
       return Promise {fulfill, _ in
