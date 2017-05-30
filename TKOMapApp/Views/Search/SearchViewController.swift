@@ -19,8 +19,6 @@ class SearchViewController: UIViewController {
                            cancelClick: self.searchBar.rx.cancelButtonClicked.asObservable())
   }()
   
-  let provider = SearchDataProvider()
-  
   @IBOutlet fileprivate weak var searchBar: UISearchBar! { didSet {
     let cancelButtonAttributes: NSDictionary = [NSForegroundColorAttributeName: UIColor.white]
     UIBarButtonItem.appearance().setTitleTextAttributes(cancelButtonAttributes as? [String : AnyObject],
@@ -28,20 +26,41 @@ class SearchViewController: UIViewController {
   }}
 
   @IBOutlet private weak var tableView: UITableView! { didSet {
-    tableView.dataSource = provider
-    tableView.delegate = self
     tableView.estimatedRowHeight = 100
     tableView.rowHeight = UITableViewAutomaticDimension
+    
+    let resultCell = String(describing: SearchResultCell.self)
+    tableView.register(UINib(nibName: resultCell, bundle: Bundle.main),
+                       forCellReuseIdentifier: SearchResultCell.Identifier)
+    
+    viewModel.places.asObservable()
+      .bind(to: self.tableView
+        .rx
+        .items(cellIdentifier: SearchResultCell.Identifier,
+               cellType: SearchResultCell.self)) { _, place, cell in
+                cell.load(place)
+      }
+      .addDisposableTo(disposeBag)
+
+    tableView
+    .rx
+    .modelSelected(Location.self)
+      .subscribe(onNext: { place in
+        self.searchBar.endEditing(true)
+        if let selectedRowIndexPath = self.tableView.indexPathForSelectedRow {
+          self.tableView.deselectRow(at: selectedRowIndexPath, animated: true)
+        }
+        
+        self.performSegue(withIdentifier: "detailViewSegue", sender: place)
+      })
+    .addDisposableTo(disposeBag)
   }}
 
   override func viewDidLoad() {
     super.viewDidLoad()
     
     navigationController?.isNavigationBarHidden = true
-    viewModel.updateUI = { self.tableView.reloadData() }
     viewModel.showError = showConnectionProblems
-    provider.viewModel = viewModel
-    provider.registerCells(for: self.tableView)
     
     viewModel.endEditing
       .drive(onNext: { [weak self] _ in
@@ -64,12 +83,5 @@ class SearchViewController: UIViewController {
     guard let detailViewController = segue.destination as? DetailViewController else { return }
     guard let location = sender as? Location else { return }
     detailViewController.setlocation(location)
-  }
-}
-
-extension SearchViewController: UITableViewDelegate {
-  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    self.searchBar.endEditing(true)
-    self.performSegue(withIdentifier: "detailViewSegue", sender: self.viewModel.places[indexPath.row])
   }
 }

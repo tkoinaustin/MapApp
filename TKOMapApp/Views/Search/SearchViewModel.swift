@@ -15,8 +15,7 @@ import RxCocoa
 
 class SearchViewModel {
   static var waiting = false
-  var places = [Location]()
-  var updateUI: (() -> Void) = { }
+  var places = Variable<[Location]>([])
   var showError: ((APIError) -> Void) = { _ in }
   let disposeBag = DisposeBag()
   let endEditing: Driver<Void>
@@ -40,8 +39,7 @@ class SearchViewModel {
       .distinctUntilChanged()
       .subscribe(onNext: { string in
         if string.isEmpty {
-          self.places.removeAll()
-          self.updateUI()
+          self.places.value.removeAll()
         }
       })
       .addDisposableTo(disposeBag)
@@ -56,16 +54,13 @@ class SearchViewModel {
 
     UIApplication.shared.isNetworkActivityIndicatorVisible = true
     return OpenCageResults.load(searchString).then { results -> Promise<Void> in
-      if results.places == nil {
-        self.places = [Location]()
-      } else {
-        self.places = results.places!
-      }
+      if results.places == nil { self.places.value = [Location]() }
+      else { self.places.value = results.places! }
       
-      self.updateUI()
-      if self.places.isEmpty {
+      if self.places.value.isEmpty {
         self.showError(APIError.noResults)
       }
+      
       return Promise {fulfill, _ in
         fulfill()
       }

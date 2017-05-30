@@ -18,7 +18,6 @@
 		CB32E7EE1EDCE6FB00B1D8A1 /* OpenCageResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB32E7EC1EDCE6FB00B1D8A1 /* OpenCageResults.swift */; };
 		CB32E7F11EDCE70D00B1D8A1 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB32E7EF1EDCE70D00B1D8A1 /* SearchResultCell.swift */; };
 		CB32E7F21EDCE70D00B1D8A1 /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB32E7F01EDCE70D00B1D8A1 /* SearchResultCell.xib */; };
-		CB32E7F71EDCE71A00B1D8A1 /* SearchDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB32E7F31EDCE71A00B1D8A1 /* SearchDataProvider.swift */; };
 		CB32E7F81EDCE71A00B1D8A1 /* SearchView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB32E7F41EDCE71A00B1D8A1 /* SearchView.storyboard */; };
 		CB32E7F91EDCE71A00B1D8A1 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB32E7F51EDCE71A00B1D8A1 /* SearchViewController.swift */; };
 		CB32E7FA1EDCE71A00B1D8A1 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB32E7F61EDCE71A00B1D8A1 /* SearchViewModel.swift */; };
@@ -60,7 +59,6 @@
 		CB32E7EC1EDCE6FB00B1D8A1 /* OpenCageResults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OpenCageResults.swift; path = Models/OpenCageResults.swift; sourceTree = "<group>"; };
 		CB32E7EF1EDCE70D00B1D8A1 /* SearchResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchResultCell.swift; path = Components/SearchResult/SearchResultCell.swift; sourceTree = "<group>"; };
 		CB32E7F01EDCE70D00B1D8A1 /* SearchResultCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SearchResultCell.xib; path = Components/SearchResult/SearchResultCell.xib; sourceTree = "<group>"; };
-		CB32E7F31EDCE71A00B1D8A1 /* SearchDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchDataProvider.swift; path = Views/Search/SearchDataProvider.swift; sourceTree = "<group>"; };
 		CB32E7F41EDCE71A00B1D8A1 /* SearchView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = SearchView.storyboard; path = Views/Search/SearchView.storyboard; sourceTree = "<group>"; };
 		CB32E7F51EDCE71A00B1D8A1 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchViewController.swift; path = Views/Search/SearchViewController.swift; sourceTree = "<group>"; };
 		CB32E7F61EDCE71A00B1D8A1 /* SearchViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchViewModel.swift; path = Views/Search/SearchViewModel.swift; sourceTree = "<group>"; };
@@ -215,7 +213,6 @@
 		CB32E7E41EDCE53A00B1D8A1 /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				CB32E7F31EDCE71A00B1D8A1 /* SearchDataProvider.swift */,
 				CB32E7F61EDCE71A00B1D8A1 /* SearchViewModel.swift */,
 				CB32E7F51EDCE71A00B1D8A1 /* SearchViewController.swift */,
 				CB32E7F41EDCE71A00B1D8A1 /* SearchView.storyboard */,
@@ -466,7 +463,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB32E7E91EDCE6EC00B1D8A1 /* API.swift in Sources */,
-				CB32E7F71EDCE71A00B1D8A1 /* SearchDataProvider.swift in Sources */,
 				CB32E7F91EDCE71A00B1D8A1 /* SearchViewController.swift in Sources */,
 				CB32E7EE1EDCE6FB00B1D8A1 /* OpenCageResults.swift in Sources */,
 				CB32E7EA1EDCE6EC00B1D8A1 /* Endpoints.swift in Sources */,
