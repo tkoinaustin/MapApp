@@ -42,14 +42,12 @@ class SearchViewController: UIViewController {
     provider.registerCells(for: self.tableView)
 
     searchBar.rx.cancelButtonClicked.asObservable()
-      .debug("cancelButtonClicked")
       .subscribe(onNext: { _ in
         self.searchBar.endEditing(true)
       })
     .addDisposableTo(disposeBag)
     
     searchBar.rx.searchButtonClicked
-      .debug("searchButtonClicked")
       .subscribe(onNext: { _ in
         _ = self.viewModel.load(self.searchBar.text!)
         self.searchBar.endEditing(true)

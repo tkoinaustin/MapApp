@@ -70,19 +70,16 @@ class DetailViewController: UIViewController {
 
 extension DetailViewController: WKNavigationDelegate {
   func webView(_ webView: WKWebView, didCommit navigation: WKNavigation!) {
-    print("webView: didCommit")
     UIView.animate(withDuration: 0.3, animations: {
       self.answerLabel.alpha = 1.0
     })
   }
   
   func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-    print("webView: didFinish")
     activityView.stopAnimating()
   }
 
   func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
-    print("webView: didFail")
     activityView.stopAnimating()
     showConnectionProblems(error.localizedDescription)
   }

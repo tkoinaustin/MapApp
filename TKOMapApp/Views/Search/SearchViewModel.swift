@@ -11,6 +11,8 @@ import PromiseKit
 import RxSwift
 import RxCocoa
 
+// This class manages the display data for SearchViewController
+
 class SearchViewModel {
   static var waiting = false
   var places = [Location]()
@@ -37,7 +39,6 @@ class SearchViewModel {
 
     UIApplication.shared.isNetworkActivityIndicatorVisible = true
     return OpenCageResults.load(searchString).then { results -> Promise<Void> in
-      print(results)
       if results.places == nil {
         self.places = [Location]()
       } else {
@@ -52,7 +53,6 @@ class SearchViewModel {
         fulfill()
       }
       }.catch { error in
-        print("load error: \(error)")
         //swiftlint:disable force_cast
         self.showError(error as! APIError)
         //swiftlint:enable force_cast

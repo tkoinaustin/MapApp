@@ -8,6 +8,8 @@
 
 import UIKit
 
+// This class implements the data source protocol for the table view
+
 class SearchDataProvider: NSObject, UITableViewDataSource {
   private let cellIdentifier = "SearchResultCell"
   weak var viewModel: SearchViewModel!
@@ -18,7 +20,6 @@ class SearchDataProvider: NSObject, UITableViewDataSource {
   }
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    print("viewModel.places.count = \(viewModel.places.count)")
     return viewModel.places.count
   }
   
