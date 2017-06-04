@@ -12,7 +12,7 @@
         <!--Search View Controller-->
         <scene sceneID="YYy-6v-P6i">
             <objects>
-                <viewController id="hgN-zv-4Fe" customClass="SearchViewController" customModule="TKOMapApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="searchView" id="hgN-zv-4Fe" customClass="SearchViewController" customModule="TKOMapApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="elN-S6-p8a"/>
                         <viewControllerLayoutGuide type="bottom" id="32v-zo-0H3"/>

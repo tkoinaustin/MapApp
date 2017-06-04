@@ -28,6 +28,10 @@
 		CB32E8061EDCE8C900B1D8A1 /* forward-200.response in Resources */ = {isa = PBXBuildFile; fileRef = CB32E8041EDCE8C900B1D8A1 /* forward-200.response */; };
 		CB32E8091EDCE8D800B1D8A1 /* APIRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB32E8071EDCE8D800B1D8A1 /* APIRequestTests.swift */; };
 		CB32E80A1EDCE8D800B1D8A1 /* APITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB32E8081EDCE8D800B1D8A1 /* APITests.swift */; };
+		CB495E5A1EE3572900A2A003 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB495E591EE3572900A2A003 /* IntroViewController.swift */; };
+		CB495E5C1EE3574600A2A003 /* IntroView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB495E5B1EE3574600A2A003 /* IntroView.storyboard */; };
+		CB495E5E1EE3576600A2A003 /* FTUEView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB495E5D1EE3576600A2A003 /* FTUEView.storyboard */; };
+		CB495E601EE3578200A2A003 /* FTUEViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB495E5F1EE3578200A2A003 /* FTUEViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +73,10 @@
 		CB32E8041EDCE8C900B1D8A1 /* forward-200.response */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "forward-200.response"; path = "API/Endpoint/forward-200.response"; sourceTree = "<group>"; };
 		CB32E8071EDCE8D800B1D8A1 /* APIRequestTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APIRequestTests.swift; path = API/APIRequestTests.swift; sourceTree = "<group>"; };
 		CB32E8081EDCE8D800B1D8A1 /* APITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APITests.swift; path = API/APITests.swift; sourceTree = "<group>"; };
+		CB495E591EE3572900A2A003 /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IntroViewController.swift; path = Views/Intro/IntroViewController.swift; sourceTree = "<group>"; };
+		CB495E5B1EE3574600A2A003 /* IntroView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = IntroView.storyboard; path = Views/Intro/IntroView.storyboard; sourceTree = "<group>"; };
+		CB495E5D1EE3576600A2A003 /* FTUEView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = FTUEView.storyboard; path = Views/FTUE/FTUEView.storyboard; sourceTree = "<group>"; };
+		CB495E5F1EE3578200A2A003 /* FTUEViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FTUEViewController.swift; path = Views/FTUE/FTUEViewController.swift; sourceTree = "<group>"; };
 		DABEF70F75829EDD5CFBF3FE /* Pods_TKOMapApp_TKOMapAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TKOMapApp_TKOMapAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -194,7 +202,8 @@
 		CB32E7E21EDCE52900B1D8A1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				CB32E7C71EDCE1A200B1D8A1 /* LaunchScreen.storyboard */,
+				CB495E571EE3569F00A2A003 /* Intro */,
+				CB495E581EE356AA00A2A003 /* FTUE */,
 				CB32E7E41EDCE53A00B1D8A1 /* Search */,
 				CB32E7E31EDCE53200B1D8A1 /* Detail */,
 			);
@@ -239,6 +248,25 @@
 			name = Endpoint;
 			sourceTree = "<group>";
 		};
+		CB495E571EE3569F00A2A003 /* Intro */ = {
+			isa = PBXGroup;
+			children = (
+				CB32E7C71EDCE1A200B1D8A1 /* LaunchScreen.storyboard */,
+				CB495E591EE3572900A2A003 /* IntroViewController.swift */,
+				CB495E5B1EE3574600A2A003 /* IntroView.storyboard */,
+			);
+			name = Intro;
+			sourceTree = "<group>";
+		};
+		CB495E581EE356AA00A2A003 /* FTUE */ = {
+			isa = PBXGroup;
+			children = (
+				CB495E5F1EE3578200A2A003 /* FTUEViewController.swift */,
+				CB495E5D1EE3576600A2A003 /* FTUEView.storyboard */,
+			);
+			name = FTUE;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -247,6 +275,7 @@
 			buildConfigurationList = CB32E7D81EDCE1A300B1D8A1 /* Build configuration list for PBXNativeTarget "TKOMapApp" */;
 			buildPhases = (
 				5E0F80602F93AA1942997886 /* [CP] Check Pods Manifest.lock */,
+				CB495E611EE37DFE00A2A003 /* Bump build number on archive */,
 				CB32E7B71EDCE1A200B1D8A1 /* Sources */,
 				CB32E7B81EDCE1A200B1D8A1 /* Frameworks */,
 				CB32E7B91EDCE1A200B1D8A1 /* Resources */,
@@ -332,6 +361,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB32E7C91EDCE1A200B1D8A1 /* LaunchScreen.storyboard in Resources */,
+				CB495E5E1EE3576600A2A003 /* FTUEView.storyboard in Resources */,
+				CB495E5C1EE3574600A2A003 /* IntroView.storyboard in Resources */,
 				CB32E7F81EDCE71A00B1D8A1 /* SearchView.storyboard in Resources */,
 				CB32E7F21EDCE70D00B1D8A1 /* SearchResultCell.xib in Resources */,
 				CB32E7FD1EDCE72600B1D8A1 /* DetailView.storyboard in Resources */,
@@ -363,7 +394,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		3DD5A941FB62757EEF5F21F8 /* [CP] Embed Pods Frameworks */ = {
@@ -393,7 +424,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		608F220A33C4F050D788965C /* [CP] Embed Pods Frameworks */ = {
@@ -410,6 +441,20 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TKOMapApp/Pods-TKOMapApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		CB495E611EE37DFE00A2A003 /* Bump build number on archive */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Bump build number on archive";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ $CONFIGURATION == Release ]; then\necho \"Bumping build number...\"\nplist=${PROJECT_DIR}/${INFOPLIST_FILE}\n\nbuildnum=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"${plist}\")\nif [[ \"${buildnum}\" == \"\" ]]; then\necho \"No build number in $plist\"\nexit 2\nfi\n\nbuildnum=$(expr $buildnum + 1)\n/usr/libexec/Plistbuddy -c \"Set CFBundleVersion $buildnum\" \"${plist}\"\necho \"Bumped build number to $buildnum\"\nelse\necho $CONFIGURATION \" build - Not bumping build number.\"\nfi";
 		};
 		CB5918BD1EDDA5390093AC57 /* Run Swiftlint */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -467,10 +512,12 @@
 				CB32E7EE1EDCE6FB00B1D8A1 /* OpenCageResults.swift in Sources */,
 				CB32E7EA1EDCE6EC00B1D8A1 /* Endpoints.swift in Sources */,
 				CB32E7ED1EDCE6FB00B1D8A1 /* Location.swift in Sources */,
+				CB495E5A1EE3572900A2A003 /* IntroViewController.swift in Sources */,
 				CB32E7FA1EDCE71A00B1D8A1 /* SearchViewModel.swift in Sources */,
 				CB32E7FE1EDCE72600B1D8A1 /* DetailViewController.swift in Sources */,
 				CB32E7F11EDCE70D00B1D8A1 /* SearchResultCell.swift in Sources */,
 				CB32E7BF1EDCE1A200B1D8A1 /* AppDelegate.swift in Sources */,
+				CB495E601EE3578200A2A003 /* FTUEViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -609,7 +656,7 @@
 				DEVELOPMENT_TEAM = H4UQYGEL4C;
 				INFOPLIST_FILE = TKOMapApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.tko-solutions.TKOMapApp";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tko-solutions.mapapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -624,7 +671,7 @@
 				DEVELOPMENT_TEAM = H4UQYGEL4C;
 				INFOPLIST_FILE = TKOMapApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.tko-solutions.TKOMapApp";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tko-solutions.mapapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
