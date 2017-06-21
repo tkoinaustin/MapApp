@@ -10,7 +10,6 @@
 		2F3B955A5292052D5B13F3E3 /* Pods_TKOMapApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A8B931D3F4EF0007F6D17BF /* Pods_TKOMapApp.framework */; };
 		B666A4C8F1E4524006F937D2 /* Pods_TKOMapApp_TKOMapAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DABEF70F75829EDD5CFBF3FE /* Pods_TKOMapApp_TKOMapAppTests.framework */; };
 		CB32E7BF1EDCE1A200B1D8A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB32E7BE1EDCE1A200B1D8A1 /* AppDelegate.swift */; };
-		CB32E7C91EDCE1A200B1D8A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB32E7C71EDCE1A200B1D8A1 /* LaunchScreen.storyboard */; };
 		CB32E7E61EDCE6C100B1D8A1 /* APIinfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB32E7E51EDCE6C100B1D8A1 /* APIinfo.plist */; };
 		CB32E7E91EDCE6EC00B1D8A1 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB32E7E71EDCE6EC00B1D8A1 /* API.swift */; };
 		CB32E7EA1EDCE6EC00B1D8A1 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB32E7E81EDCE6EC00B1D8A1 /* Endpoints.swift */; };
@@ -18,20 +17,20 @@
 		CB32E7EE1EDCE6FB00B1D8A1 /* OpenCageResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB32E7EC1EDCE6FB00B1D8A1 /* OpenCageResults.swift */; };
 		CB32E7F11EDCE70D00B1D8A1 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB32E7EF1EDCE70D00B1D8A1 /* SearchResultCell.swift */; };
 		CB32E7F21EDCE70D00B1D8A1 /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB32E7F01EDCE70D00B1D8A1 /* SearchResultCell.xib */; };
-		CB32E7F81EDCE71A00B1D8A1 /* SearchView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB32E7F41EDCE71A00B1D8A1 /* SearchView.storyboard */; };
-		CB32E7F91EDCE71A00B1D8A1 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB32E7F51EDCE71A00B1D8A1 /* SearchViewController.swift */; };
-		CB32E7FA1EDCE71A00B1D8A1 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB32E7F61EDCE71A00B1D8A1 /* SearchViewModel.swift */; };
-		CB32E7FD1EDCE72600B1D8A1 /* DetailView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB32E7FB1EDCE72600B1D8A1 /* DetailView.storyboard */; };
-		CB32E7FE1EDCE72600B1D8A1 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB32E7FC1EDCE72600B1D8A1 /* DetailViewController.swift */; };
 		CB32E8001EDCE78D00B1D8A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB32E7FF1EDCE78D00B1D8A1 /* Assets.xcassets */; };
 		CB32E8051EDCE8C900B1D8A1 /* EndpointTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB32E8031EDCE8C900B1D8A1 /* EndpointTest.swift */; };
 		CB32E8061EDCE8C900B1D8A1 /* forward-200.response in Resources */ = {isa = PBXBuildFile; fileRef = CB32E8041EDCE8C900B1D8A1 /* forward-200.response */; };
 		CB32E8091EDCE8D800B1D8A1 /* APIRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB32E8071EDCE8D800B1D8A1 /* APIRequestTests.swift */; };
 		CB32E80A1EDCE8D800B1D8A1 /* APITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB32E8081EDCE8D800B1D8A1 /* APITests.swift */; };
-		CB495E5A1EE3572900A2A003 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB495E591EE3572900A2A003 /* IntroViewController.swift */; };
-		CB495E5C1EE3574600A2A003 /* IntroView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB495E5B1EE3574600A2A003 /* IntroView.storyboard */; };
-		CB495E5E1EE3576600A2A003 /* FTUEView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB495E5D1EE3576600A2A003 /* FTUEView.storyboard */; };
-		CB495E601EE3578200A2A003 /* FTUEViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB495E5F1EE3578200A2A003 /* FTUEViewController.swift */; };
+		CB5908041EFB1AA800D77DB5 /* DetailView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB5907F81EFB1AA800D77DB5 /* DetailView.storyboard */; };
+		CB5908051EFB1AA800D77DB5 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5907F91EFB1AA800D77DB5 /* DetailViewController.swift */; };
+		CB5908061EFB1AA800D77DB5 /* FTUEView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB5907FB1EFB1AA800D77DB5 /* FTUEView.storyboard */; };
+		CB5908071EFB1AA800D77DB5 /* FTUEViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5907FC1EFB1AA800D77DB5 /* FTUEViewController.swift */; };
+		CB5908081EFB1AA800D77DB5 /* IntroView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB5907FE1EFB1AA800D77DB5 /* IntroView.storyboard */; };
+		CB5908091EFB1AA800D77DB5 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5907FF1EFB1AA800D77DB5 /* IntroViewController.swift */; };
+		CB59080A1EFB1AA800D77DB5 /* SearchView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB5908011EFB1AA800D77DB5 /* SearchView.storyboard */; };
+		CB59080B1EFB1AA800D77DB5 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5908021EFB1AA800D77DB5 /* SearchViewController.swift */; };
+		CB59080C1EFB1AA800D77DB5 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5908031EFB1AA800D77DB5 /* SearchViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +51,6 @@
 		8A8B931D3F4EF0007F6D17BF /* Pods_TKOMapApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TKOMapApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB32E7BB1EDCE1A200B1D8A1 /* TKOMapApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TKOMapApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB32E7BE1EDCE1A200B1D8A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CB32E7C81EDCE1A200B1D8A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CB32E7CA1EDCE1A200B1D8A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB32E7CF1EDCE1A300B1D8A1 /* TKOMapAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TKOMapAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB32E7D51EDCE1A300B1D8A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -63,20 +61,20 @@
 		CB32E7EC1EDCE6FB00B1D8A1 /* OpenCageResults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OpenCageResults.swift; path = Models/OpenCageResults.swift; sourceTree = "<group>"; };
 		CB32E7EF1EDCE70D00B1D8A1 /* SearchResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchResultCell.swift; path = Components/SearchResult/SearchResultCell.swift; sourceTree = "<group>"; };
 		CB32E7F01EDCE70D00B1D8A1 /* SearchResultCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SearchResultCell.xib; path = Components/SearchResult/SearchResultCell.xib; sourceTree = "<group>"; };
-		CB32E7F41EDCE71A00B1D8A1 /* SearchView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = SearchView.storyboard; path = Views/Search/SearchView.storyboard; sourceTree = "<group>"; };
-		CB32E7F51EDCE71A00B1D8A1 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchViewController.swift; path = Views/Search/SearchViewController.swift; sourceTree = "<group>"; };
-		CB32E7F61EDCE71A00B1D8A1 /* SearchViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchViewModel.swift; path = Views/Search/SearchViewModel.swift; sourceTree = "<group>"; };
-		CB32E7FB1EDCE72600B1D8A1 /* DetailView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = DetailView.storyboard; path = Views/Detail/DetailView.storyboard; sourceTree = "<group>"; };
-		CB32E7FC1EDCE72600B1D8A1 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailViewController.swift; path = Views/Detail/DetailViewController.swift; sourceTree = "<group>"; };
 		CB32E7FF1EDCE78D00B1D8A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB32E8031EDCE8C900B1D8A1 /* EndpointTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EndpointTest.swift; path = API/Endpoint/EndpointTest.swift; sourceTree = "<group>"; };
 		CB32E8041EDCE8C900B1D8A1 /* forward-200.response */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "forward-200.response"; path = "API/Endpoint/forward-200.response"; sourceTree = "<group>"; };
 		CB32E8071EDCE8D800B1D8A1 /* APIRequestTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APIRequestTests.swift; path = API/APIRequestTests.swift; sourceTree = "<group>"; };
 		CB32E8081EDCE8D800B1D8A1 /* APITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APITests.swift; path = API/APITests.swift; sourceTree = "<group>"; };
-		CB495E591EE3572900A2A003 /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IntroViewController.swift; path = Views/Intro/IntroViewController.swift; sourceTree = "<group>"; };
-		CB495E5B1EE3574600A2A003 /* IntroView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = IntroView.storyboard; path = Views/Intro/IntroView.storyboard; sourceTree = "<group>"; };
-		CB495E5D1EE3576600A2A003 /* FTUEView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = FTUEView.storyboard; path = Views/FTUE/FTUEView.storyboard; sourceTree = "<group>"; };
-		CB495E5F1EE3578200A2A003 /* FTUEViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FTUEViewController.swift; path = Views/FTUE/FTUEViewController.swift; sourceTree = "<group>"; };
+		CB5907F81EFB1AA800D77DB5 /* DetailView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DetailView.storyboard; sourceTree = "<group>"; };
+		CB5907F91EFB1AA800D77DB5 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		CB5907FB1EFB1AA800D77DB5 /* FTUEView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FTUEView.storyboard; sourceTree = "<group>"; };
+		CB5907FC1EFB1AA800D77DB5 /* FTUEViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTUEViewController.swift; sourceTree = "<group>"; };
+		CB5907FE1EFB1AA800D77DB5 /* IntroView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = IntroView.storyboard; sourceTree = "<group>"; };
+		CB5907FF1EFB1AA800D77DB5 /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
+		CB5908011EFB1AA800D77DB5 /* SearchView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SearchView.storyboard; sourceTree = "<group>"; };
+		CB5908021EFB1AA800D77DB5 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		CB5908031EFB1AA800D77DB5 /* SearchViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		DABEF70F75829EDD5CFBF3FE /* Pods_TKOMapApp_TKOMapAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TKOMapApp_TKOMapAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -150,7 +148,7 @@
 				CB32E7DE1EDCE4FB00B1D8A1 /* API */,
 				CB32E7DF1EDCE50500B1D8A1 /* Models */,
 				CB32E7E01EDCE50F00B1D8A1 /* Components */,
-				CB32E7E21EDCE52900B1D8A1 /* Views */,
+				CB32E7E21EDCE52900B1D8A1 /* ViewControllers */,
 			);
 			path = TKOMapApp;
 			sourceTree = "<group>";
@@ -199,34 +197,15 @@
 			name = SearchResult;
 			sourceTree = "<group>";
 		};
-		CB32E7E21EDCE52900B1D8A1 /* Views */ = {
+		CB32E7E21EDCE52900B1D8A1 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				CB495E571EE3569F00A2A003 /* Intro */,
-				CB495E581EE356AA00A2A003 /* FTUE */,
-				CB32E7E41EDCE53A00B1D8A1 /* Search */,
-				CB32E7E31EDCE53200B1D8A1 /* Detail */,
+				CB5907F71EFB1AA800D77DB5 /* Detail */,
+				CB5907FA1EFB1AA800D77DB5 /* FTUE */,
+				CB5907FD1EFB1AA800D77DB5 /* Intro */,
+				CB5908001EFB1AA800D77DB5 /* Search */,
 			);
-			name = Views;
-			sourceTree = "<group>";
-		};
-		CB32E7E31EDCE53200B1D8A1 /* Detail */ = {
-			isa = PBXGroup;
-			children = (
-				CB32E7FC1EDCE72600B1D8A1 /* DetailViewController.swift */,
-				CB32E7FB1EDCE72600B1D8A1 /* DetailView.storyboard */,
-			);
-			name = Detail;
-			sourceTree = "<group>";
-		};
-		CB32E7E41EDCE53A00B1D8A1 /* Search */ = {
-			isa = PBXGroup;
-			children = (
-				CB32E7F61EDCE71A00B1D8A1 /* SearchViewModel.swift */,
-				CB32E7F51EDCE71A00B1D8A1 /* SearchViewController.swift */,
-				CB32E7F41EDCE71A00B1D8A1 /* SearchView.storyboard */,
-			);
-			name = Search;
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 		CB32E8011EDCE86200B1D8A1 /* API */ = {
@@ -248,23 +227,45 @@
 			name = Endpoint;
 			sourceTree = "<group>";
 		};
-		CB495E571EE3569F00A2A003 /* Intro */ = {
+		CB5907F71EFB1AA800D77DB5 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
-				CB32E7C71EDCE1A200B1D8A1 /* LaunchScreen.storyboard */,
-				CB495E591EE3572900A2A003 /* IntroViewController.swift */,
-				CB495E5B1EE3574600A2A003 /* IntroView.storyboard */,
+				CB5907F81EFB1AA800D77DB5 /* DetailView.storyboard */,
+				CB5907F91EFB1AA800D77DB5 /* DetailViewController.swift */,
 			);
-			name = Intro;
+			name = Detail;
+			path = ViewControllers/Detail;
 			sourceTree = "<group>";
 		};
-		CB495E581EE356AA00A2A003 /* FTUE */ = {
+		CB5907FA1EFB1AA800D77DB5 /* FTUE */ = {
 			isa = PBXGroup;
 			children = (
-				CB495E5F1EE3578200A2A003 /* FTUEViewController.swift */,
-				CB495E5D1EE3576600A2A003 /* FTUEView.storyboard */,
+				CB5907FB1EFB1AA800D77DB5 /* FTUEView.storyboard */,
+				CB5907FC1EFB1AA800D77DB5 /* FTUEViewController.swift */,
 			);
 			name = FTUE;
+			path = ViewControllers/FTUE;
+			sourceTree = "<group>";
+		};
+		CB5907FD1EFB1AA800D77DB5 /* Intro */ = {
+			isa = PBXGroup;
+			children = (
+				CB5907FE1EFB1AA800D77DB5 /* IntroView.storyboard */,
+				CB5907FF1EFB1AA800D77DB5 /* IntroViewController.swift */,
+			);
+			name = Intro;
+			path = ViewControllers/Intro;
+			sourceTree = "<group>";
+		};
+		CB5908001EFB1AA800D77DB5 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				CB5908011EFB1AA800D77DB5 /* SearchView.storyboard */,
+				CB5908021EFB1AA800D77DB5 /* SearchViewController.swift */,
+				CB5908031EFB1AA800D77DB5 /* SearchViewModel.swift */,
+			);
+			name = Search;
+			path = ViewControllers/Search;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -360,12 +361,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB32E7C91EDCE1A200B1D8A1 /* LaunchScreen.storyboard in Resources */,
-				CB495E5E1EE3576600A2A003 /* FTUEView.storyboard in Resources */,
-				CB495E5C1EE3574600A2A003 /* IntroView.storyboard in Resources */,
-				CB32E7F81EDCE71A00B1D8A1 /* SearchView.storyboard in Resources */,
+				CB59080A1EFB1AA800D77DB5 /* SearchView.storyboard in Resources */,
+				CB5908061EFB1AA800D77DB5 /* FTUEView.storyboard in Resources */,
+				CB5908081EFB1AA800D77DB5 /* IntroView.storyboard in Resources */,
 				CB32E7F21EDCE70D00B1D8A1 /* SearchResultCell.xib in Resources */,
-				CB32E7FD1EDCE72600B1D8A1 /* DetailView.storyboard in Resources */,
+				CB5908041EFB1AA800D77DB5 /* DetailView.storyboard in Resources */,
 				CB32E8001EDCE78D00B1D8A1 /* Assets.xcassets in Resources */,
 				CB32E7E61EDCE6C100B1D8A1 /* APIinfo.plist in Resources */,
 			);
@@ -507,17 +507,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB59080B1EFB1AA800D77DB5 /* SearchViewController.swift in Sources */,
 				CB32E7E91EDCE6EC00B1D8A1 /* API.swift in Sources */,
-				CB32E7F91EDCE71A00B1D8A1 /* SearchViewController.swift in Sources */,
+				CB59080C1EFB1AA800D77DB5 /* SearchViewModel.swift in Sources */,
 				CB32E7EE1EDCE6FB00B1D8A1 /* OpenCageResults.swift in Sources */,
+				CB5908051EFB1AA800D77DB5 /* DetailViewController.swift in Sources */,
 				CB32E7EA1EDCE6EC00B1D8A1 /* Endpoints.swift in Sources */,
 				CB32E7ED1EDCE6FB00B1D8A1 /* Location.swift in Sources */,
-				CB495E5A1EE3572900A2A003 /* IntroViewController.swift in Sources */,
-				CB32E7FA1EDCE71A00B1D8A1 /* SearchViewModel.swift in Sources */,
-				CB32E7FE1EDCE72600B1D8A1 /* DetailViewController.swift in Sources */,
+				CB5908071EFB1AA800D77DB5 /* FTUEViewController.swift in Sources */,
+				CB5908091EFB1AA800D77DB5 /* IntroViewController.swift in Sources */,
 				CB32E7F11EDCE70D00B1D8A1 /* SearchResultCell.swift in Sources */,
 				CB32E7BF1EDCE1A200B1D8A1 /* AppDelegate.swift in Sources */,
-				CB495E601EE3578200A2A003 /* FTUEViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -540,17 +540,6 @@
 			targetProxy = CB32E7D01EDCE1A300B1D8A1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		CB32E7C71EDCE1A200B1D8A1 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CB32E7C81EDCE1A200B1D8A1 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		CB32E7D61EDCE1A300B1D8A1 /* Debug */ = {
