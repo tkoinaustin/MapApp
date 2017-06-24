@@ -9,14 +9,14 @@
 /* Begin PBXBuildFile section */
 		2F3B955A5292052D5B13F3E3 /* Pods_TKOMapApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A8B931D3F4EF0007F6D17BF /* Pods_TKOMapApp.framework */; };
 		B666A4C8F1E4524006F937D2 /* Pods_TKOMapApp_TKOMapAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DABEF70F75829EDD5CFBF3FE /* Pods_TKOMapApp_TKOMapAppTests.framework */; };
+		CB0993971EFEEABF000787FD /* APIinfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB32E7E51EDCE6C100B1D8A1 /* APIinfo.plist */; };
+		CB09939D1EFEEE05000787FD /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB09939B1EFEEE05000787FD /* SearchResultCell.swift */; };
+		CB09939E1EFEEE05000787FD /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB09939C1EFEEE05000787FD /* SearchResultCell.xib */; };
 		CB32E7BF1EDCE1A200B1D8A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB32E7BE1EDCE1A200B1D8A1 /* AppDelegate.swift */; };
-		CB32E7E61EDCE6C100B1D8A1 /* APIinfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB32E7E51EDCE6C100B1D8A1 /* APIinfo.plist */; };
 		CB32E7E91EDCE6EC00B1D8A1 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB32E7E71EDCE6EC00B1D8A1 /* API.swift */; };
 		CB32E7EA1EDCE6EC00B1D8A1 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB32E7E81EDCE6EC00B1D8A1 /* Endpoints.swift */; };
 		CB32E7ED1EDCE6FB00B1D8A1 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB32E7EB1EDCE6FB00B1D8A1 /* Location.swift */; };
 		CB32E7EE1EDCE6FB00B1D8A1 /* OpenCageResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB32E7EC1EDCE6FB00B1D8A1 /* OpenCageResults.swift */; };
-		CB32E7F11EDCE70D00B1D8A1 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB32E7EF1EDCE70D00B1D8A1 /* SearchResultCell.swift */; };
-		CB32E7F21EDCE70D00B1D8A1 /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB32E7F01EDCE70D00B1D8A1 /* SearchResultCell.xib */; };
 		CB32E8001EDCE78D00B1D8A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB32E7FF1EDCE78D00B1D8A1 /* Assets.xcassets */; };
 		CB32E8051EDCE8C900B1D8A1 /* EndpointTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB32E8031EDCE8C900B1D8A1 /* EndpointTest.swift */; };
 		CB32E8061EDCE8C900B1D8A1 /* forward-200.response in Resources */ = {isa = PBXBuildFile; fileRef = CB32E8041EDCE8C900B1D8A1 /* forward-200.response */; };
@@ -49,6 +49,8 @@
 		65E7EA4032323350F922B31C /* Pods-TKOMapApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TKOMapApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TKOMapApp/Pods-TKOMapApp.debug.xcconfig"; sourceTree = "<group>"; };
 		87BF044FE817CA1BB409AD47 /* Pods-TKOMapApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TKOMapApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-TKOMapApp/Pods-TKOMapApp.release.xcconfig"; sourceTree = "<group>"; };
 		8A8B931D3F4EF0007F6D17BF /* Pods_TKOMapApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TKOMapApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB09939B1EFEEE05000787FD /* SearchResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchResultCell.swift; path = Views/SearchResult/SearchResultCell.swift; sourceTree = "<group>"; };
+		CB09939C1EFEEE05000787FD /* SearchResultCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SearchResultCell.xib; path = Views/SearchResult/SearchResultCell.xib; sourceTree = "<group>"; };
 		CB32E7BB1EDCE1A200B1D8A1 /* TKOMapApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TKOMapApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB32E7BE1EDCE1A200B1D8A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB32E7CA1EDCE1A200B1D8A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -59,8 +61,6 @@
 		CB32E7E81EDCE6EC00B1D8A1 /* Endpoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Endpoints.swift; path = API/Endpoints.swift; sourceTree = "<group>"; };
 		CB32E7EB1EDCE6FB00B1D8A1 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Location.swift; path = Models/Location.swift; sourceTree = "<group>"; };
 		CB32E7EC1EDCE6FB00B1D8A1 /* OpenCageResults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OpenCageResults.swift; path = Models/OpenCageResults.swift; sourceTree = "<group>"; };
-		CB32E7EF1EDCE70D00B1D8A1 /* SearchResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchResultCell.swift; path = Components/SearchResult/SearchResultCell.swift; sourceTree = "<group>"; };
-		CB32E7F01EDCE70D00B1D8A1 /* SearchResultCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SearchResultCell.xib; path = Components/SearchResult/SearchResultCell.xib; sourceTree = "<group>"; };
 		CB32E7FF1EDCE78D00B1D8A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB32E8031EDCE8C900B1D8A1 /* EndpointTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EndpointTest.swift; path = API/Endpoint/EndpointTest.swift; sourceTree = "<group>"; };
 		CB32E8041EDCE8C900B1D8A1 /* forward-200.response */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "forward-200.response"; path = "API/Endpoint/forward-200.response"; sourceTree = "<group>"; };
@@ -118,6 +118,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CB09939A1EFEEDD9000787FD /* SearchResult */ = {
+			isa = PBXGroup;
+			children = (
+				CB09939B1EFEEE05000787FD /* SearchResultCell.swift */,
+				CB09939C1EFEEE05000787FD /* SearchResultCell.xib */,
+			);
+			name = SearchResult;
+			sourceTree = "<group>";
+		};
 		CB32E7B21EDCE1A200B1D8A1 = {
 			isa = PBXGroup;
 			children = (
@@ -147,7 +156,7 @@
 				CB32E7CA1EDCE1A200B1D8A1 /* Info.plist */,
 				CB32E7DE1EDCE4FB00B1D8A1 /* API */,
 				CB32E7DF1EDCE50500B1D8A1 /* Models */,
-				CB32E7E01EDCE50F00B1D8A1 /* Components */,
+				CB32E7E01EDCE50F00B1D8A1 /* Views */,
 				CB32E7E21EDCE52900B1D8A1 /* ViewControllers */,
 			);
 			path = TKOMapApp;
@@ -180,21 +189,12 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
-		CB32E7E01EDCE50F00B1D8A1 /* Components */ = {
+		CB32E7E01EDCE50F00B1D8A1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				CB32E7E11EDCE51A00B1D8A1 /* SearchResult */,
+				CB09939A1EFEEDD9000787FD /* SearchResult */,
 			);
-			name = Components;
-			sourceTree = "<group>";
-		};
-		CB32E7E11EDCE51A00B1D8A1 /* SearchResult */ = {
-			isa = PBXGroup;
-			children = (
-				CB32E7EF1EDCE70D00B1D8A1 /* SearchResultCell.swift */,
-				CB32E7F01EDCE70D00B1D8A1 /* SearchResultCell.xib */,
-			);
-			name = SearchResult;
+			name = Views;
 			sourceTree = "<group>";
 		};
 		CB32E7E21EDCE52900B1D8A1 /* ViewControllers */ = {
@@ -364,10 +364,10 @@
 				CB59080A1EFB1AA800D77DB5 /* SearchView.storyboard in Resources */,
 				CB5908061EFB1AA800D77DB5 /* FTUEView.storyboard in Resources */,
 				CB5908081EFB1AA800D77DB5 /* IntroView.storyboard in Resources */,
-				CB32E7F21EDCE70D00B1D8A1 /* SearchResultCell.xib in Resources */,
 				CB5908041EFB1AA800D77DB5 /* DetailView.storyboard in Resources */,
+				CB0993971EFEEABF000787FD /* APIinfo.plist in Resources */,
 				CB32E8001EDCE78D00B1D8A1 /* Assets.xcassets in Resources */,
-				CB32E7E61EDCE6C100B1D8A1 /* APIinfo.plist in Resources */,
+				CB09939E1EFEEE05000787FD /* SearchResultCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -516,7 +516,7 @@
 				CB32E7ED1EDCE6FB00B1D8A1 /* Location.swift in Sources */,
 				CB5908071EFB1AA800D77DB5 /* FTUEViewController.swift in Sources */,
 				CB5908091EFB1AA800D77DB5 /* IntroViewController.swift in Sources */,
-				CB32E7F11EDCE70D00B1D8A1 /* SearchResultCell.swift in Sources */,
+				CB09939D1EFEEE05000787FD /* SearchResultCell.swift in Sources */,
 				CB32E7BF1EDCE1A200B1D8A1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
