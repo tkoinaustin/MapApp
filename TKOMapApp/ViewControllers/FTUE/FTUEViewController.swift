@@ -12,7 +12,8 @@ class FTUEViewController: UIViewController {
   @IBOutlet private var panelOne: UIView!
   @IBOutlet private var panelTwo: UIView!
   @IBOutlet private var panelThree: UIView!
-  
+  private var panelFour: UIView!
+
   @IBOutlet private weak var panelOneLabel: UILabel!
   @IBOutlet private weak var panelOneView: UIView!
   @IBOutlet private weak var panelTwoLabel: UILabel!
@@ -35,6 +36,7 @@ class FTUEViewController: UIViewController {
   var pageControlDone: CGFloat!
   
   override func viewDidLoad() {
+    panelFour = searchView().view
     setSizes()
     addPanels()
     
@@ -43,7 +45,6 @@ class FTUEViewController: UIViewController {
   
   private func setSizes() {
     let height = UIScreen.main.bounds.height
-    let search = self.searchView()
 
     panelWidth = UIScreen.main.bounds.width
     page2Offset = panelWidth
@@ -55,12 +56,11 @@ class FTUEViewController: UIViewController {
     panelOne.frame = CGRect(x: 0, y: 0, width: panelWidth, height: height)
     panelTwo.frame = CGRect(x: page2Offset, y: 0, width: panelWidth, height: height)
     panelThree.frame = CGRect(x: page3Offset, y: 0, width: panelWidth, height: height)
-    search.view.frame = CGRect(x: page4Offset, y: 0, width: panelWidth, height: height)
+    panelFour.frame = CGRect(x: page4Offset, y: 0, width: panelWidth, height: height)
 }
   
   private func addPanels() {
     let height = UIScreen.main.bounds.height
-    let search = self.searchView()
     
     panelsView.addSubview(panelOne)
     panelOneLabel.backgroundColor = Palate.page1Label.color.value
@@ -68,7 +68,7 @@ class FTUEViewController: UIViewController {
     panelTwoLabel.backgroundColor = Palate.page2Label.color.value
     panelsView.addSubview(panelThree)
     panelThreeLabel.backgroundColor = Palate.page3Label.color.value
-    panelsView.addSubview(search.view)
+    panelsView.addSubview(panelFour)
     
     panelsView.contentSize = CGSize(
       width: panelWidth * CGFloat(pageControl.numberOfPages),
