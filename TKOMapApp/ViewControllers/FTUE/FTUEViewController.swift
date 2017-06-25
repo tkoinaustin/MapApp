@@ -105,6 +105,8 @@ class FTUEViewController: UIViewController {
       
       guard let navController = UIStoryboard(name: "SearchView", bundle: nil)
         .instantiateInitialViewController() else { return }
+      
+      UserDefaults.standard.set(false, forKey: "FTUE")
       UIApplication.shared.keyWindow?.rootViewController = navController
     }
     
