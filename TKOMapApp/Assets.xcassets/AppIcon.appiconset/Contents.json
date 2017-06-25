@@ -23,25 +23,25 @@
     {
       "size" : "40x40",
       "idiom" : "iphone",
-      "filename" : "Treetog-Junior-Earth-80.png",
+      "filename" : "earth-icon80.png",
       "scale" : "2x"
     },
     {
       "size" : "40x40",
       "idiom" : "iphone",
-      "filename" : "Treetog-Junior-Earth-121.png",
+      "filename" : "earth-icon120-1.png",
       "scale" : "3x"
     },
     {
       "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "Treetog-Junior-Earth-120.png",
+      "filename" : "earth-icon120.png",
       "scale" : "2x"
     },
     {
       "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "Treetog-Junior-Earth-180.png",
+      "filename" : "earth-icon180.png",
       "scale" : "3x"
     }
   ],

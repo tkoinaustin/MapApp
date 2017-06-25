@@ -32,6 +32,7 @@
 		CB59080A1EFB1AA800D77DB5 /* SearchView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB5908011EFB1AA800D77DB5 /* SearchView.storyboard */; };
 		CB59080B1EFB1AA800D77DB5 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5908021EFB1AA800D77DB5 /* SearchViewController.swift */; };
 		CB59080C1EFB1AA800D77DB5 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5908031EFB1AA800D77DB5 /* SearchViewModel.swift */; };
+		CBDAC8FE1EFFE31C00F76A5C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBDAC8FD1EFFE31C00F76A5C /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		CB5908011EFB1AA800D77DB5 /* SearchView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SearchView.storyboard; sourceTree = "<group>"; };
 		CB5908021EFB1AA800D77DB5 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		CB5908031EFB1AA800D77DB5 /* SearchViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		CBDAC8FD1EFFE31C00F76A5C /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DABEF70F75829EDD5CFBF3FE /* Pods_TKOMapApp_TKOMapAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TKOMapApp_TKOMapAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -261,6 +263,7 @@
 		CB5907FD1EFB1AA800D77DB5 /* Intro */ = {
 			isa = PBXGroup;
 			children = (
+				CBDAC8FD1EFFE31C00F76A5C /* LaunchScreen.storyboard */,
 				CB5907FF1EFB1AA800D77DB5 /* IntroViewController.swift */,
 				CB5907FE1EFB1AA800D77DB5 /* IntroView.storyboard */,
 			);
@@ -373,6 +376,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB59080A1EFB1AA800D77DB5 /* SearchView.storyboard in Resources */,
+				CBDAC8FE1EFFE31C00F76A5C /* LaunchScreen.storyboard in Resources */,
 				CB5908061EFB1AA800D77DB5 /* FTUEView.storyboard in Resources */,
 				CB5908081EFB1AA800D77DB5 /* IntroView.storyboard in Resources */,
 				CB5908041EFB1AA800D77DB5 /* DetailView.storyboard in Resources */,
