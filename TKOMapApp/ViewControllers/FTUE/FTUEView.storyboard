@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -22,9 +21,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradient" translatesAutoresizingMaskIntoConstraints="NO" id="3bo-H9-SxP">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                            </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" directionalLockEnabled="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o1b-ax-tC1">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -34,6 +30,8 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="37" id="bg4-qk-MsH"/>
                                 </constraints>
+                                <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="currentPageIndicatorTintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <action selector="userPaged:" destination="yzG-zf-Ns4" eventType="valueChanged" id="DZK-fA-0Oc"/>
                                 </connections>
@@ -41,20 +39,20 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="PtT-q2-H8t" firstAttribute="top" secondItem="3bo-H9-SxP" secondAttribute="bottom" id="3LZ-Lx-yTy"/>
-                            <constraint firstItem="3bo-H9-SxP" firstAttribute="top" secondItem="pSW-T3-SnU" secondAttribute="top" id="D1E-cO-Auu"/>
                             <constraint firstAttribute="trailing" secondItem="ZXQ-cl-Qaq" secondAttribute="trailing" id="GGL-fo-Zt7"/>
                             <constraint firstItem="PtT-q2-H8t" firstAttribute="top" secondItem="ZXQ-cl-Qaq" secondAttribute="bottom" id="Utn-8m-WXC"/>
-                            <constraint firstAttribute="trailing" secondItem="3bo-H9-SxP" secondAttribute="trailing" id="day-A9-KNa"/>
-                            <constraint firstItem="3bo-H9-SxP" firstAttribute="leading" secondItem="pSW-T3-SnU" secondAttribute="leading" id="p8l-Yi-dpP"/>
                             <constraint firstItem="ZXQ-cl-Qaq" firstAttribute="leading" secondItem="pSW-T3-SnU" secondAttribute="leading" id="t02-E4-AUr"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="pageControl" destination="ZXQ-cl-Qaq" id="dOx-Zj-O0L"/>
                         <outlet property="panelOne" destination="Jd8-xJ-yPb" id="O9z-tK-cJ2"/>
+                        <outlet property="panelOneLabel" destination="ouQ-T9-jBa" id="dbr-2Z-3Zd"/>
+                        <outlet property="panelOneView" destination="HqJ-B3-Ggf" id="Fm8-ZP-NT8"/>
                         <outlet property="panelThree" destination="HUc-Ai-5OW" id="5eW-Yh-AGX"/>
+                        <outlet property="panelThreeLabel" destination="edh-py-kVg" id="glG-UY-3rn"/>
                         <outlet property="panelTwo" destination="YYW-88-UaJ" id="8ZG-0n-v7c"/>
+                        <outlet property="panelTwoLabel" destination="kGK-gR-ujI" id="nC4-mP-FwT"/>
                         <outlet property="panelsView" destination="o1b-ax-tC1" id="ODi-iw-nAT"/>
                     </connections>
                 </viewController>
@@ -63,72 +61,108 @@
                     <rect key="frame" x="0.0" y="0.0" width="336" height="626"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Map App" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8vk-hf-WmD">
-                            <rect key="frame" x="25.5" y="166.5" width="285.5" height="36"/>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HqJ-B3-Ggf">
+                            <rect key="frame" x="20" y="236.5" width="296" height="153.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Map App is a simple little app that allows you to type in a name and let the Open Cage Geolocating API find relavent matches." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ouQ-T9-jBa">
+                                    <rect key="frame" x="5" y="5" width="286" height="143.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="ouQ-T9-jBa" firstAttribute="leading" secondItem="HqJ-B3-Ggf" secondAttribute="leading" constant="5" id="4FI-oX-gYI"/>
+                                <constraint firstAttribute="bottom" secondItem="ouQ-T9-jBa" secondAttribute="bottom" constant="5" id="8XF-1a-fgm"/>
+                                <constraint firstItem="ouQ-T9-jBa" firstAttribute="top" secondItem="HqJ-B3-Ggf" secondAttribute="top" constant="5" id="McY-Pj-Kz6"/>
+                                <constraint firstAttribute="trailing" secondItem="ouQ-T9-jBa" secondAttribute="trailing" constant="5" id="qJN-re-cre"/>
+                            </constraints>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Map App" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="8vk-hf-WmD">
+                            <rect key="frame" x="20" y="100.5" width="294.5" height="36"/>
                             <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Map App is a simple little app that allows you to type in a name and let the Open Cage Geolocating API find relavent matches." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ouQ-T9-jBa">
-                            <rect key="frame" x="79" y="181" width="200" height="265"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstItem="ouQ-T9-jBa" firstAttribute="top" secondItem="8vk-hf-WmD" secondAttribute="bottom" constant="25" id="IgZ-gc-ids"/>
-                        <constraint firstItem="ouQ-T9-jBa" firstAttribute="centerX" secondItem="Jd8-xJ-yPb" secondAttribute="centerX" id="JVw-Kt-xj4"/>
+                        <constraint firstItem="HqJ-B3-Ggf" firstAttribute="centerX" secondItem="Jd8-xJ-yPb" secondAttribute="centerX" id="3sp-r5-r0F"/>
+                        <constraint firstAttribute="trailing" secondItem="HqJ-B3-Ggf" secondAttribute="trailing" constant="20" id="6wH-wv-h7q"/>
+                        <constraint firstItem="8vk-hf-WmD" firstAttribute="top" secondItem="Jd8-xJ-yPb" secondAttribute="top" constant="100" id="Fjh-6S-k6R"/>
                         <constraint firstItem="8vk-hf-WmD" firstAttribute="centerX" secondItem="Jd8-xJ-yPb" secondAttribute="centerX" id="VSJ-Vu-dKJ"/>
-                        <constraint firstItem="ouQ-T9-jBa" firstAttribute="width" secondItem="Jd8-xJ-yPb" secondAttribute="width" multiplier="0.75" id="lSw-ZR-suY"/>
-                        <constraint firstItem="8vk-hf-WmD" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Jd8-xJ-yPb" secondAttribute="leading" constant="20" id="qpO-gr-btP"/>
-                        <constraint firstItem="ouQ-T9-jBa" firstAttribute="centerY" secondItem="Jd8-xJ-yPb" secondAttribute="centerY" id="rXd-EF-dVk"/>
+                        <constraint firstItem="HqJ-B3-Ggf" firstAttribute="centerY" secondItem="Jd8-xJ-yPb" secondAttribute="centerY" id="l8p-YM-X0W"/>
+                        <constraint firstItem="HqJ-B3-Ggf" firstAttribute="leading" secondItem="Jd8-xJ-yPb" secondAttribute="leading" constant="20" id="pGo-XW-OiD"/>
+                        <constraint firstItem="8vk-hf-WmD" firstAttribute="leading" secondItem="Jd8-xJ-yPb" secondAttribute="leading" constant="20" id="qpO-gr-btP"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" id="YYW-88-UaJ">
                     <rect key="frame" x="0.0" y="0.0" width="343" height="623"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kGK-gR-ujI">
-                            <rect key="frame" x="82" y="179" width="178" height="265"/>
-                            <string key="text">A list of potential matches is returned, and you can drill a little deeper by selecting an entry and getting a details view with a map of the area.</string>
-                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZgY-yI-IfZ">
+                            <rect key="frame" x="20" y="220.5" width="303" height="182"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kGK-gR-ujI">
+                                    <rect key="frame" x="5" y="5" width="293" height="172"/>
+                                    <string key="text">A list of potential matches is returned, and you can drill a little deeper by selecting an entry and getting a details view with a map of the area.</string>
+                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="kGK-gR-ujI" firstAttribute="leading" secondItem="ZgY-yI-IfZ" secondAttribute="leading" constant="5" id="CK5-1h-AIm"/>
+                                <constraint firstAttribute="bottom" secondItem="kGK-gR-ujI" secondAttribute="bottom" constant="5" id="DkB-ye-0hw"/>
+                                <constraint firstAttribute="trailing" secondItem="kGK-gR-ujI" secondAttribute="trailing" constant="5" id="hbC-HC-EdL"/>
+                                <constraint firstItem="kGK-gR-ujI" firstAttribute="top" secondItem="ZgY-yI-IfZ" secondAttribute="top" constant="5" id="pmM-Qg-EYm"/>
+                            </constraints>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstItem="kGK-gR-ujI" firstAttribute="centerX" secondItem="YYW-88-UaJ" secondAttribute="centerX" id="JLB-kz-jAU"/>
-                        <constraint firstItem="kGK-gR-ujI" firstAttribute="centerY" secondItem="YYW-88-UaJ" secondAttribute="centerY" id="ZqK-Yf-EJW"/>
-                        <constraint firstItem="kGK-gR-ujI" firstAttribute="width" secondItem="YYW-88-UaJ" secondAttribute="width" multiplier="0.75" id="hW8-4M-UlQ"/>
+                        <constraint firstItem="ZgY-yI-IfZ" firstAttribute="centerY" secondItem="YYW-88-UaJ" secondAttribute="centerY" id="8ZP-kf-r9q"/>
+                        <constraint firstItem="ZgY-yI-IfZ" firstAttribute="centerX" secondItem="YYW-88-UaJ" secondAttribute="centerX" id="IxB-wx-btk"/>
+                        <constraint firstAttribute="trailing" secondItem="ZgY-yI-IfZ" secondAttribute="trailing" constant="20" id="Mrn-1y-XzV"/>
+                        <constraint firstItem="ZgY-yI-IfZ" firstAttribute="leading" secondItem="YYW-88-UaJ" secondAttribute="leading" constant="20" id="nMH-tb-pxE"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" id="HUc-Ai-5OW">
                     <rect key="frame" x="0.0" y="0.0" width="364" height="625"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edh-py-kVg">
-                            <rect key="frame" x="109" y="186" width="178" height="265"/>
-                            <string key="text">This is just a kick around app that can be fun seeing what interesting matches come up. Type in IA and you get hits from Russia and the UAE.  Have fun browsing the world!  Oh, click the world on the intro screen to go straight to the app next time.</string>
-                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TmG-Hq-Nhx">
+                            <rect key="frame" x="20" y="136" width="324" height="354"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edh-py-kVg">
+                                    <rect key="frame" x="5" y="5" width="314" height="344"/>
+                                    <string key="text">This is just a kick around app that can be fun seeing what interesting matches come up. Type in IA and you get hits from Russia and the UAE.  Have fun browsing the world!  Oh, click the world on the intro screen to go straight to the app next time.</string>
+                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="edh-py-kVg" firstAttribute="leading" secondItem="TmG-Hq-Nhx" secondAttribute="leading" constant="5" id="CSX-Lp-HXc"/>
+                                <constraint firstAttribute="bottom" secondItem="edh-py-kVg" secondAttribute="bottom" constant="5" id="FfL-1i-QSf"/>
+                                <constraint firstItem="edh-py-kVg" firstAttribute="top" secondItem="TmG-Hq-Nhx" secondAttribute="top" constant="5" id="f3U-cA-UMX"/>
+                                <constraint firstAttribute="trailing" secondItem="edh-py-kVg" secondAttribute="trailing" constant="5" id="hHc-WM-7g4"/>
+                            </constraints>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstItem="edh-py-kVg" firstAttribute="centerX" secondItem="HUc-Ai-5OW" secondAttribute="centerX" id="1q5-RM-ELv"/>
-                        <constraint firstItem="edh-py-kVg" firstAttribute="width" secondItem="HUc-Ai-5OW" secondAttribute="width" multiplier="0.75" id="hfW-XO-ULd"/>
-                        <constraint firstItem="edh-py-kVg" firstAttribute="centerY" secondItem="HUc-Ai-5OW" secondAttribute="centerY" id="owH-C5-Q8I"/>
+                        <constraint firstItem="TmG-Hq-Nhx" firstAttribute="centerX" secondItem="HUc-Ai-5OW" secondAttribute="centerX" id="JBl-2X-r78"/>
+                        <constraint firstItem="TmG-Hq-Nhx" firstAttribute="leading" secondItem="HUc-Ai-5OW" secondAttribute="leading" constant="20" id="cBY-DR-ar1"/>
+                        <constraint firstAttribute="trailing" secondItem="TmG-Hq-Nhx" secondAttribute="trailing" constant="20" id="iWm-GM-KFn"/>
+                        <constraint firstItem="TmG-Hq-Nhx" firstAttribute="centerY" secondItem="HUc-Ai-5OW" secondAttribute="centerY" id="ihW-C7-gw6"/>
                     </constraints>
                 </view>
             </objects>
             <point key="canvasLocation" x="80.799999999999997" y="95.802098950524751"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="gradient" width="458" height="604"/>
-    </resources>
 </document>

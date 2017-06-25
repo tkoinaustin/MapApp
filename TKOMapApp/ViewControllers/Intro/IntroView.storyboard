@@ -37,16 +37,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradient" translatesAutoresizingMaskIntoConstraints="NO" id="13k-xB-bZS">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MYG-go-Fxe">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eaG-Yw-ssP">
-                                <rect key="frame" x="59.5" y="205.5" width="256" height="256"/>
-                                <state key="normal" image="earth-icon"/>
-                                <connections>
-                                    <action selector="continueAction:" destination="EG6-bc-1dR" eventType="touchUpInside" id="Hq9-ml-XEs"/>
-                                </connections>
-                            </button>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Cz-g2-03S">
+                                <rect key="frame" x="118.5" y="264.5" width="138" height="138"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eaG-Yw-ssP">
+                                        <rect key="frame" x="5" y="5" width="128" height="128"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="128" id="Hbu-MN-zpu"/>
+                                            <constraint firstAttribute="height" constant="128" id="SSn-VK-gu0"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="3" minY="6" maxX="3" maxY="0.0"/>
+                                        <state key="normal" image="earth-icon"/>
+                                        <connections>
+                                            <action selector="continueAction:" destination="EG6-bc-1dR" eventType="touchUpInside" id="Hq9-ml-XEs"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="eaG-Yw-ssP" secondAttribute="trailing" constant="5" id="40T-6K-tZg"/>
+                                    <constraint firstItem="eaG-Yw-ssP" firstAttribute="leading" secondItem="5Cz-g2-03S" secondAttribute="leading" constant="5" id="ZWo-hM-ggl"/>
+                                    <constraint firstAttribute="bottom" secondItem="eaG-Yw-ssP" secondAttribute="bottom" constant="5" id="gjc-6B-kNi"/>
+                                    <constraint firstItem="eaG-Yw-ssP" firstAttribute="top" secondItem="5Cz-g2-03S" secondAttribute="top" constant="5" id="tvJ-pt-XLd"/>
+                                </constraints>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Map App" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="upS-Mo-gMv">
                                 <rect key="frame" x="94" y="300" width="187.5" height="67.5"/>
                                 <fontDescription key="fontDescription" name="KohinoorDevanagari-Light" family="Kohinoor Devanagari" pointSize="48"/>
@@ -56,18 +74,20 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="13k-xB-bZS" firstAttribute="leading" secondItem="quZ-lP-LJ2" secondAttribute="leading" id="0X0-Lg-6Oi"/>
-                            <constraint firstItem="eaG-Yw-ssP" firstAttribute="centerX" secondItem="quZ-lP-LJ2" secondAttribute="centerX" id="8LZ-xk-E3Z"/>
-                            <constraint firstItem="eJc-Kt-lcu" firstAttribute="top" secondItem="13k-xB-bZS" secondAttribute="bottom" id="GPy-qJ-yah"/>
+                            <constraint firstItem="MYG-go-Fxe" firstAttribute="top" secondItem="quZ-lP-LJ2" secondAttribute="top" id="Lfh-cm-0ED"/>
                             <constraint firstItem="upS-Mo-gMv" firstAttribute="centerX" secondItem="quZ-lP-LJ2" secondAttribute="centerX" id="Xgd-If-Kyr"/>
-                            <constraint firstAttribute="trailing" secondItem="13k-xB-bZS" secondAttribute="trailing" id="era-OL-Uuo"/>
                             <constraint firstItem="upS-Mo-gMv" firstAttribute="centerY" secondItem="quZ-lP-LJ2" secondAttribute="centerY" id="jEO-5m-EHX"/>
-                            <constraint firstItem="13k-xB-bZS" firstAttribute="top" secondItem="quZ-lP-LJ2" secondAttribute="top" id="r3h-4B-VsF"/>
-                            <constraint firstItem="eaG-Yw-ssP" firstAttribute="centerY" secondItem="quZ-lP-LJ2" secondAttribute="centerY" id="zIi-k8-l1m"/>
+                            <constraint firstAttribute="trailing" secondItem="MYG-go-Fxe" secondAttribute="trailing" id="mXL-CX-ipi"/>
+                            <constraint firstItem="MYG-go-Fxe" firstAttribute="leading" secondItem="quZ-lP-LJ2" secondAttribute="leading" id="p8H-hs-zQ9"/>
+                            <constraint firstItem="eJc-Kt-lcu" firstAttribute="top" secondItem="MYG-go-Fxe" secondAttribute="bottom" id="poH-vd-1Cm"/>
+                            <constraint firstItem="5Cz-g2-03S" firstAttribute="centerY" secondItem="quZ-lP-LJ2" secondAttribute="centerY" id="wXW-Wy-3fP"/>
+                            <constraint firstItem="5Cz-g2-03S" firstAttribute="centerX" secondItem="quZ-lP-LJ2" secondAttribute="centerX" id="yLd-U4-UBX"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="backgroundView" destination="MYG-go-Fxe" id="1kV-2y-acY"/>
                         <outlet property="continueButton" destination="eaG-Yw-ssP" id="Nkw-iS-niE"/>
+                        <outlet property="continueView" destination="5Cz-g2-03S" id="x23-V7-6q4"/>
                         <outlet property="logoLabel" destination="upS-Mo-gMv" id="bxP-Vf-Wsy"/>
                         <segue destination="SmN-Jb-DtE" kind="show" identifier="FTUESegue" id="OqO-Qd-eRk"/>
                         <segue destination="rXi-Sf-nZb" kind="show" identifier="searchSegue" id="iBN-IC-Nqf"/>
@@ -80,6 +100,5 @@
     </scenes>
     <resources>
         <image name="earth-icon" width="256" height="256"/>
-        <image name="gradient" width="458" height="604"/>
     </resources>
 </document>

@@ -19,7 +19,12 @@ class SearchViewController: UIViewController {
                            cancelClick: self.searchBar.rx.cancelButtonClicked.asObservable())
   }()
   
+  @IBOutlet private weak var imageView: UIImageView! { didSet {
+    imageView.backgroundColor = UIColor.red //Palate.page1.value.withAlphaComponent(1)
+  }}
+  
   @IBOutlet fileprivate weak var searchBar: UISearchBar! { didSet {
+    searchBar.barTintColor = Palate.page1Label.value
     let cancelButtonAttributes: NSDictionary = [NSForegroundColorAttributeName: UIColor.white]
     UIBarButtonItem.appearance().setTitleTextAttributes(cancelButtonAttributes as? [String : AnyObject],
                                                         for: UIControlState.normal)
@@ -28,6 +33,7 @@ class SearchViewController: UIViewController {
   @IBOutlet private weak var tableView: UITableView! { didSet {
     tableView.estimatedRowHeight = 100
     tableView.rowHeight = UITableViewAutomaticDimension
+    tableView.separatorColor = Palate.page1.value.withAlphaComponent(1)
     
     let resultCell = String(describing: SearchResultCell.self)
     tableView.register(UINib(nibName: resultCell, bundle: Bundle.main),

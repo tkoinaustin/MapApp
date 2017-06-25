@@ -12,6 +12,7 @@
 		CB0993971EFEEABF000787FD /* APIinfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB32E7E51EDCE6C100B1D8A1 /* APIinfo.plist */; };
 		CB09939D1EFEEE05000787FD /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB09939B1EFEEE05000787FD /* SearchResultCell.swift */; };
 		CB09939E1EFEEE05000787FD /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB09939C1EFEEE05000787FD /* SearchResultCell.xib */; };
+		CB0993A11EFEEFB1000787FD /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0993A01EFEEFB1000787FD /* Color.swift */; };
 		CB32E7BF1EDCE1A200B1D8A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB32E7BE1EDCE1A200B1D8A1 /* AppDelegate.swift */; };
 		CB32E7E91EDCE6EC00B1D8A1 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB32E7E71EDCE6EC00B1D8A1 /* API.swift */; };
 		CB32E7EA1EDCE6EC00B1D8A1 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB32E7E81EDCE6EC00B1D8A1 /* Endpoints.swift */; };
@@ -51,6 +52,7 @@
 		8A8B931D3F4EF0007F6D17BF /* Pods_TKOMapApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TKOMapApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB09939B1EFEEE05000787FD /* SearchResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchResultCell.swift; path = Views/SearchResult/SearchResultCell.swift; sourceTree = "<group>"; };
 		CB09939C1EFEEE05000787FD /* SearchResultCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SearchResultCell.xib; path = Views/SearchResult/SearchResultCell.xib; sourceTree = "<group>"; };
+		CB0993A01EFEEFB1000787FD /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Color.swift; path = Utility/Color.swift; sourceTree = "<group>"; };
 		CB32E7BB1EDCE1A200B1D8A1 /* TKOMapApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TKOMapApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB32E7BE1EDCE1A200B1D8A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB32E7CA1EDCE1A200B1D8A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -127,6 +129,14 @@
 			name = SearchResult;
 			sourceTree = "<group>";
 		};
+		CB09939F1EFEEF7C000787FD /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				CB0993A01EFEEFB1000787FD /* Color.swift */,
+			);
+			name = Utility;
+			sourceTree = "<group>";
+		};
 		CB32E7B21EDCE1A200B1D8A1 = {
 			isa = PBXGroup;
 			children = (
@@ -156,6 +166,7 @@
 				CB32E7CA1EDCE1A200B1D8A1 /* Info.plist */,
 				CB32E7DE1EDCE4FB00B1D8A1 /* API */,
 				CB32E7DF1EDCE50500B1D8A1 /* Models */,
+				CB09939F1EFEEF7C000787FD /* Utility */,
 				CB32E7E01EDCE50F00B1D8A1 /* Views */,
 				CB32E7E21EDCE52900B1D8A1 /* ViewControllers */,
 			);
@@ -230,8 +241,8 @@
 		CB5907F71EFB1AA800D77DB5 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
-				CB5907F81EFB1AA800D77DB5 /* DetailView.storyboard */,
 				CB5907F91EFB1AA800D77DB5 /* DetailViewController.swift */,
+				CB5907F81EFB1AA800D77DB5 /* DetailView.storyboard */,
 			);
 			name = Detail;
 			path = ViewControllers/Detail;
@@ -240,8 +251,8 @@
 		CB5907FA1EFB1AA800D77DB5 /* FTUE */ = {
 			isa = PBXGroup;
 			children = (
-				CB5907FB1EFB1AA800D77DB5 /* FTUEView.storyboard */,
 				CB5907FC1EFB1AA800D77DB5 /* FTUEViewController.swift */,
+				CB5907FB1EFB1AA800D77DB5 /* FTUEView.storyboard */,
 			);
 			name = FTUE;
 			path = ViewControllers/FTUE;
@@ -250,8 +261,8 @@
 		CB5907FD1EFB1AA800D77DB5 /* Intro */ = {
 			isa = PBXGroup;
 			children = (
-				CB5907FE1EFB1AA800D77DB5 /* IntroView.storyboard */,
 				CB5907FF1EFB1AA800D77DB5 /* IntroViewController.swift */,
+				CB5907FE1EFB1AA800D77DB5 /* IntroView.storyboard */,
 			);
 			name = Intro;
 			path = ViewControllers/Intro;
@@ -260,9 +271,9 @@
 		CB5908001EFB1AA800D77DB5 /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				CB5908011EFB1AA800D77DB5 /* SearchView.storyboard */,
-				CB5908021EFB1AA800D77DB5 /* SearchViewController.swift */,
 				CB5908031EFB1AA800D77DB5 /* SearchViewModel.swift */,
+				CB5908021EFB1AA800D77DB5 /* SearchViewController.swift */,
+				CB5908011EFB1AA800D77DB5 /* SearchView.storyboard */,
 			);
 			name = Search;
 			path = ViewControllers/Search;
@@ -512,6 +523,7 @@
 				CB59080C1EFB1AA800D77DB5 /* SearchViewModel.swift in Sources */,
 				CB32E7EE1EDCE6FB00B1D8A1 /* OpenCageResults.swift in Sources */,
 				CB5908051EFB1AA800D77DB5 /* DetailViewController.swift in Sources */,
+				CB0993A11EFEEFB1000787FD /* Color.swift in Sources */,
 				CB32E7EA1EDCE6EC00B1D8A1 /* Endpoints.swift in Sources */,
 				CB32E7ED1EDCE6FB00B1D8A1 /* Location.swift in Sources */,
 				CB5908071EFB1AA800D77DB5 /* FTUEViewController.swift in Sources */,

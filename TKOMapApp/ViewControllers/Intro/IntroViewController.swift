@@ -11,8 +11,15 @@ import UIKit
 class IntroViewController: UIViewController {
   var firstTimeThrough = true
 
-  @IBOutlet private weak var continueButton: UIButton!
+  @IBOutlet private weak var continueButton: UIButton! { didSet {
+    continueButton.backgroundColor = Palate.page1Label.value
+  }}
+
   @IBOutlet private weak var logoLabel: UILabel!
+  @IBOutlet private weak var backgroundView: UIView! { didSet {
+    backgroundView.backgroundColor = Palate.page1.value
+  }}
+  @IBOutlet private weak var continueView: UIView!
   
   @IBAction func continueAction(_ sender: UIButton) {
     startNextSegue()
@@ -22,7 +29,7 @@ class IntroViewController: UIViewController {
     super.viewDidLoad()
     let height = view.frame.height
     let transform = CGAffineTransform(translationX: 0, y: height)
-    continueButton.transform = transform
+    continueView.transform = transform
   }
   
   override func viewWillAppear(_ animated: Bool) {
@@ -31,7 +38,7 @@ class IntroViewController: UIViewController {
     
     let transform = CGAffineTransform(translationX: 0, y: -height)
     UIView.animate(withDuration: 1.5, animations: {
-      self.continueButton.transform = CGAffineTransform.identity
+      self.continueView.transform = CGAffineTransform.identity
       self.logoLabel.transform = transform
     }, completion: { _ in
       DispatchQueue.main.asyncAfter(deadline: .now() + 3, execute: {
@@ -52,8 +59,10 @@ class IntroViewController: UIViewController {
   }
 
   private func needFTUE() -> Bool {
-    guard UserDefaults.standard.value(forKey: "FTUE") != nil else { return true }
-    return false
+    guard UserDefaults.standard.value(forKey: "FTUE") != nil else {
+      return true
+    }
+    return true
   }
 
 }

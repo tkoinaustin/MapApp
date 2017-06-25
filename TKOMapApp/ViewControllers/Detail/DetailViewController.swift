@@ -28,8 +28,16 @@ class DetailViewController: UIViewController {
     activityView.stopAnimating()
   }}
   
+  @IBOutlet private weak var backButton: UIButton! { didSet {
+    backButton.tintColor = Palate.page1.value.withAlphaComponent(1)
+  }}
+  
   @IBOutlet private weak var addressLabel: UILabel! { didSet {
     addressLabel.text = location.fullAddress
+  }}
+
+  @IBOutlet private weak var tintView: UIView! { didSet {
+    tintView.backgroundColor = Palate.page1.value
   }}
 
   @IBOutlet private weak var locationLabel: UILabel! { didSet {

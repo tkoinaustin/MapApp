@@ -23,6 +23,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kxk-FF-3nV">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zwn-9i-f6g">
                                 <rect key="frame" x="6" y="20" width="44" height="44"/>
                                 <constraints>
@@ -74,14 +78,18 @@
                         <constraints>
                             <constraint firstItem="mav-18-DMK" firstAttribute="centerX" secondItem="0Qe-kV-6Dr" secondAttribute="centerX" id="3ib-Dg-iQk"/>
                             <constraint firstItem="OJo-uU-s8B" firstAttribute="centerX" secondItem="0Qe-kV-6Dr" secondAttribute="centerX" id="3pV-cd-FnS"/>
+                            <constraint firstItem="1kd-qc-SmC" firstAttribute="top" secondItem="kxk-FF-3nV" secondAttribute="bottom" id="7fa-y5-hya"/>
                             <constraint firstItem="fZe-jS-1cG" firstAttribute="centerX" secondItem="0Qe-kV-6Dr" secondAttribute="centerX" id="Dr8-eH-fcO"/>
+                            <constraint firstAttribute="trailing" secondItem="kxk-FF-3nV" secondAttribute="trailing" id="H5p-Ml-gsl"/>
                             <constraint firstItem="kbK-L4-3aU" firstAttribute="top" secondItem="OJo-uU-s8B" secondAttribute="bottom" constant="20" id="Iim-hG-FT6"/>
                             <constraint firstItem="xOX-sB-fAm" firstAttribute="centerY" secondItem="5OP-Q6-l1G" secondAttribute="centerY" id="K2V-0e-tGt"/>
                             <constraint firstItem="5OP-Q6-l1G" firstAttribute="trailing" secondItem="0Qe-kV-6Dr" secondAttribute="trailingMargin" id="NaA-nh-Xow"/>
                             <constraint firstItem="5OP-Q6-l1G" firstAttribute="top" secondItem="kbK-L4-3aU" secondAttribute="bottom" constant="20" id="VMv-d5-8hf"/>
                             <constraint firstItem="mav-18-DMK" firstAttribute="leading" secondItem="0Qe-kV-6Dr" secondAttribute="leadingMargin" constant="20" id="Yjm-3F-Oai"/>
+                            <constraint firstItem="kxk-FF-3nV" firstAttribute="leading" secondItem="0Qe-kV-6Dr" secondAttribute="leading" id="Yth-40-SbW"/>
                             <constraint firstItem="OJo-uU-s8B" firstAttribute="centerY" secondItem="zwn-9i-f6g" secondAttribute="centerY" id="auF-bI-YeH"/>
                             <constraint firstItem="zwn-9i-f6g" firstAttribute="leading" secondItem="0Qe-kV-6Dr" secondAttribute="leadingMargin" constant="-10" id="bwo-m6-8fJ"/>
+                            <constraint firstItem="kxk-FF-3nV" firstAttribute="top" secondItem="0Qe-kV-6Dr" secondAttribute="top" id="g5u-lp-qVd"/>
                             <constraint firstItem="5OP-Q6-l1G" firstAttribute="leading" secondItem="0Qe-kV-6Dr" secondAttribute="leadingMargin" id="gOP-Gq-G66"/>
                             <constraint firstItem="kbK-L4-3aU" firstAttribute="centerX" secondItem="0Qe-kV-6Dr" secondAttribute="centerX" id="ldi-wY-O08"/>
                             <constraint firstItem="fZe-jS-1cG" firstAttribute="leading" secondItem="0Qe-kV-6Dr" secondAttribute="leadingMargin" constant="20" id="rqD-Zw-DpU"/>
@@ -95,8 +103,10 @@
                         <outlet property="activityView" destination="xOX-sB-fAm" id="Det-kf-8Au"/>
                         <outlet property="addressLabel" destination="fZe-jS-1cG" id="Qck-S2-cWb"/>
                         <outlet property="answerLabel" destination="kbK-L4-3aU" id="g14-ak-Ghb"/>
+                        <outlet property="backButton" destination="zwn-9i-f6g" id="JKl-kJ-XSt"/>
                         <outlet property="locationLabel" destination="mav-18-DMK" id="QfR-bs-J7e"/>
                         <outlet property="mapView" destination="5OP-Q6-l1G" id="uBi-34-rLc"/>
+                        <outlet property="tintView" destination="kxk-FF-3nV" id="FBu-os-vyg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TQR-Me-sZa" userLabel="First Responder" sceneMemberID="firstResponder"/>
